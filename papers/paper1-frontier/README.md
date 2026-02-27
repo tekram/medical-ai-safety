@@ -32,13 +32,15 @@ The first cross-model comparison paper. Evaluates **7 frontier models** — 4 st
 
 **Figures:**
 
-![ASR by Model](figures/p1_fig1_success_by_model.png)
+![ASR by Model — Sorted Best to Worst](figures/p1_fig_main_comparison.png)
 
 ![Category × Model Heatmap](figures/p1_fig2_category_heatmap.png)
 
-![Guardrail Distribution](figures/p1_fig3_guardrail_distribution.png)
+![Category-Level Detail — Grouped Bars](figures/p1_fig_category_detail.png)
 
-![Standard vs. Thinking Harm Distribution](figures/p1_fig4_standard_vs_thinking.png)
+![Guardrail Breakdown — 100% Stacked](figures/p1_fig_guardrail_breakdown.png)
+
+![Safety Quadrant — Full Refusal Rate vs. ASR](figures/p1_fig_safety_quadrant.png)
 
 ## Read the Paper
 

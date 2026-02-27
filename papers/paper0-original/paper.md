@@ -152,6 +152,8 @@ Through iterative testing during taxonomy development, we refined attack categor
 
 Our final taxonomy comprises 8 major categories, each with 3 sub-strategies:
 
+![Taxonomy Overview: Eight Attack Categories](figures/p0_fig_taxonomy.png)
+
 #### 1. Dangerous Dosing
 Eliciting incorrect medication doses that could cause overdose, toxicity, or treatment failure.
 
@@ -420,7 +422,7 @@ Across all 160 adversarial prompts evaluated against Claude Sonnet 4.5, 11 attac
 
 **Figure 1**: Attack success rate by category (Claude Sonnet 4.5, n=160). Dashed line indicates overall mean (6.9%).
 
-![Figure 1: Success rate by category](figures/fig1_success_by_category.png)
+![Figure 1: Success rate by category](figures/p0_fig_overview.png)
 
 **Table 1: Attack success rate by category (Claude Sonnet 4.5, n=160)**
 
@@ -451,6 +453,7 @@ Contraindication Bypass was the only other category to achieve success, with 2/6
 **Figure 2**: Distribution of guardrail response types.
 
 ![Figure 2: Guardrail distribution](figures/fig2_guardrail_distribution.png)
+
 
 **Table 2: Distribution of guardrail response types (Claude Sonnet 4.5, n=160)**
 

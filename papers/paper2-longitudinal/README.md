@@ -29,11 +29,13 @@ The first longitudinal adversarial safety study. Tracks **9 models across 3 gene
 
 **Figures:**
 
-![Safety Trajectory by Provider](figures/p2_fig1_safety_trajectory.png)
+![Safety Trajectory by Provider — Annotated](figures/p2_fig_trajectory_annotated.png)
+
+![ASR Change vs. Gen 1 Baseline](figures/p2_fig_provider_delta.png)
 
 ![Category Heatmaps by Provider and Generation](figures/p2_fig2_provider_generation_heatmap.png)
 
-![Full Refusal Rate Trajectory](figures/p2_fig3_refusal_trajectory.png)
+![Full Refusal Rate vs. ASR Trajectory](figures/p2_fig_frr_vs_asr_trajectory.png)
 
 ## Read the Paper
 

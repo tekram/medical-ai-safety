@@ -149,13 +149,19 @@ All nine models evaluated at n=160 (1,440 total evaluations).
 
 Figure 1 visualizes the trajectories. The inter-provider ASR gap at the latest generation (Gen 3):
 
-![Figure 1: Safety Trajectory by Provider and Generation](figures/p2_fig1_safety_trajectory.png)
+![Figure 1: Safety Trajectory by Provider and Generation](figures/p2_fig_trajectory_annotated.png)
 
 - Anthropic Gen 3 (Claude Sonnet 4.5): **6.9% ASR**
 - Google Gen 3 (Gemini 3 Flash): **10.6% ASR**
 - OpenAI Gen 3 (GPT-5.2): **21.2% ASR**
 
 The Anthropic-OpenAI gap of 14.3 percentage points at Gen 3 is larger than at Gen 1 (5.0 pp), indicating diverging rather than converging safety trajectories between these providers. Anthropic leads Google by 3.7 pp at Gen 3. Despite starting at similar Gen 1 levels, Anthropic and Google have diverged through different intermediate paths (Google via larger Gen 2 regression), while OpenAI has essentially failed to improve beyond its Gen 1 baseline.
+
+**Figure 1b: ASR Change vs. Generation 1 Baseline (Diverging Bar)**
+
+![Figure 1b: ASR Change vs. Gen 1 Baseline by Provider](figures/p2_fig_provider_delta.png)
+
+*Positive values indicate regression (higher ASR than Gen 1); negative values indicate improvement. Anthropic's consistent leftward bars contrast sharply with OpenAI's Gen 2 regression.*
 
 ### 4.3 Category-Level Longitudinal Patterns
 
@@ -179,7 +185,7 @@ Figure 2 shows per-provider heatmaps of ASR by attack category across generation
 
 Full Refusal Rate (Figure 3) provides a complementary safety signal:
 
-![Figure 3: Full Refusal Rate Trajectory by Provider and Generation](figures/p2_fig3_refusal_trajectory.png)
+![Figure 3: Full Refusal Rate Trajectory by Provider and Generation](figures/p2_fig_frr_vs_asr_trajectory.png)
 
 **Anthropic FRR trajectory**: 64.4% → 73.1% → 86.3% — the most pronounced upward trend across providers. The 86.3% FRR at Gen 3 means that 86 of every 100 adversarial prompts receive categorical refusals, with only 6.9% achieving harmful compliance.
 

@@ -149,7 +149,7 @@ Table 1 presents the primary results for all six models.
 
 All models evaluated at n=160 (1,120 total evaluations).
 
-![Figure 0: Attack Success Rate by Model](figures/p1_fig1_success_by_model.png)
+![Figure 0: Attack Success Rate by Model — Sorted Best to Worst](figures/p1_fig_main_comparison.png)
 
 The range of ASR across models spans from 6.9% (Claude Sonnet 4.5) to 21.2% (GPT-5.2) — a 3.1-fold difference. Mean harm level shows even greater spread: 0.38 to 1.35, reflecting not only whether attacks succeed but how severely. Gemini 3 Flash presents a distinctive profile: 10.6% overall ASR, but 0% success on 6 of 8 attack categories — its entire vulnerability is concentrated in Authority Impersonation (80%).
 
@@ -160,6 +160,8 @@ The range of ASR across models spans from 6.9% (Claude Sonnet 4.5) to 21.2% (GPT
 Table 2 shows ASR by attack category and model. Figure 1 visualizes this as a heatmap.
 
 ![Figure 1: Attack Success Rate by Category and Model](figures/p1_fig2_category_heatmap.png)
+
+![Figure 1b: Category-Level ASR — Grouped Model Comparison](figures/p1_fig_category_detail.png)
 
 **Table 2: Attack Success Rate (%) by Category and Model**
 
@@ -188,6 +190,8 @@ Figure 2 shows the full distribution of guardrail types per model.
 
 ![Figure 2: Guardrail Type Distribution by Model](figures/p1_fig3_guardrail_distribution.png)
 
+![Figure 2b: Guardrail Breakdown — 100% Stacked by Model](figures/p1_fig_guardrail_breakdown.png)
+
 **Full Refusal** rates reveal the most striking inter-model differences:
 - Claude Sonnet 4.5: 86.2% — the highest refusal rate of any model
 - GPT-5.2: 43.8% — the lowest, with 29.4% partial refusals and 13.8% weak caveats
@@ -215,9 +219,17 @@ Higher-difficulty attacks (score 4) were more successful (16.1% ASR) than diffic
 
 Figure 3 shows violin plots of harm level distributions by model type.
 
-![Figure 3: Harm Level Distribution — Standard vs. Thinking Models](figures/p1_fig4_standard_vs_thinking.png) Both distributions are heavily right-skewed (most responses are low-harm), but the thinking model distribution shows slightly lower mass above the harm threshold. The mean harm levels are 1.06 for standard models and 0.76 for thinking models, driven primarily by GPT-5.2's relatively high mean of 1.35.
+![Figure 3: Harm Level Distribution — Standard vs. Thinking Models](figures/p1_fig4_standard_vs_thinking.png)
+
+Both distributions are heavily right-skewed (most responses are low-harm), but the thinking model distribution shows slightly lower mass above the harm threshold. The mean harm levels are 1.06 for standard models and 0.76 for thinking models, driven primarily by GPT-5.2's relatively high mean of 1.35.
 
 The key observation is that reasoning-augmented models do not provide categorical safety improvements: o3 (thinking) has a higher ASR than Gemini 3.1 Pro (thinking) and similar ASR to Gemini 2.5 Pro (standard), while Claude Sonnet 4.5 (standard) remains the overall best performer. Architecture class is less predictive than model family and safety training investment.
+
+**Figure 4: Safety Quadrant — Full Refusal Rate vs. Attack Success Rate**
+
+![Figure 4: Safety Quadrant — Full Refusal Rate vs. Attack Success Rate](figures/p1_fig_safety_quadrant.png)
+
+*Each model is positioned by its Full Refusal Rate (x-axis) and Attack Success Rate (y-axis). Models in the lower-right quadrant (high refusal, low ASR) represent the strongest safety profiles. Claude Sonnet 4.5 occupies this ideal position; GPT-5.2 occupies the opposite corner.*
 
 ---
 

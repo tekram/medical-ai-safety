@@ -19,7 +19,9 @@ The foundational paper in this series. Introduces the **8-category, 24-sub-strat
 
 **Figures:**
 
-![Figure 1: Success Rate by Attack Category](figures/fig1_success_by_category.png)
+![Taxonomy: Eight Attack Categories at a Glance](figures/p0_fig_taxonomy.png)
+
+![Figure 1: Attack Success Rate by Category](figures/p0_fig_overview.png)
 
 ![Figure 2: Guardrail Distribution](figures/fig2_guardrail_distribution.png)
 
