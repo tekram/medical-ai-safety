@@ -1,0 +1,240 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+/* ============================================================
+   Medical AI Safety Research — Custom Theme
+   ============================================================ */
+
+/* ---- Typography ------------------------------------------- */
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #24292e;
+}
+
+.page-header {
+  background-color: #1a3a5c;
+  background-image: linear-gradient(135deg, #1a3a5c 0%, #0d2137 100%);
+  padding: 3rem 2rem;
+}
+
+.project-name {
+  font-size: 2.25rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.project-tagline {
+  font-size: 1.05rem;
+  opacity: 0.85;
+  margin-top: 0.5rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ---- Main content width ----------------------------------- */
+
+.main-content {
+  max-width: 960px;
+  padding: 2.5rem 2rem;
+}
+
+/* ---- Headings --------------------------------------------- */
+
+.main-content h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a3a5c;
+  border-bottom: 3px solid #1a3a5c;
+  padding-bottom: 0.4rem;
+  margin-top: 2.5rem;
+}
+
+.main-content h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a3a5c;
+  border-bottom: 1px solid #d0d7de;
+  padding-bottom: 0.3rem;
+  margin-top: 2rem;
+}
+
+.main-content h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #24292e;
+  margin-top: 1.5rem;
+}
+
+.main-content h4 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #444;
+  margin-top: 1.25rem;
+}
+
+/* ---- Blockquotes — used for "The Core Question" ----------- */
+
+.main-content blockquote {
+  border-left: 4px solid #1a3a5c;
+  background: #f0f4f8;
+  padding: 1rem 1.25rem;
+  border-radius: 0 6px 6px 0;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: #2c3e50;
+  font-size: 1.05rem;
+}
+
+/* ---- Tables ----------------------------------------------- */
+
+.main-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.92rem;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+.main-content table thead tr {
+  background-color: #1a3a5c;
+  color: #fff;
+  font-weight: 600;
+  text-align: left;
+}
+
+.main-content table th,
+.main-content table td {
+  padding: 0.65rem 0.9rem;
+  border: 1px solid #d0d7de;
+}
+
+.main-content table tbody tr:nth-child(even) {
+  background-color: #f6f8fa;
+}
+
+.main-content table tbody tr:hover {
+  background-color: #eaf0f7;
+}
+
+/* Bold cells with color emphasis */
+.main-content table td strong {
+  color: #1a3a5c;
+}
+
+/* ---- Figures ---------------------------------------------- */
+
+.main-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1.5rem auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+  border: 1px solid #e1e4e8;
+}
+
+/* Figure captions — the bold text before each img tag */
+.main-content p > strong:only-child,
+.main-content p > strong:first-child {
+  display: block;
+  font-size: 0.88rem;
+  color: #57606a;
+  margin-bottom: 0.25rem;
+  font-style: italic;
+}
+
+/* ---- Code blocks ------------------------------------------ */
+
+.main-content pre {
+  background: #0d1117;
+  color: #e6edf3;
+  border-radius: 8px;
+  padding: 1.25rem;
+  font-size: 0.875rem;
+  overflow-x: auto;
+  border: 1px solid #30363d;
+}
+
+.main-content code {
+  background: #f0f4f8;
+  color: #d63384;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.875em;
+}
+
+.main-content pre code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+  font-size: inherit;
+}
+
+/* ---- Horizontal rules ------------------------------------- */
+
+.main-content hr {
+  border: none;
+  border-top: 2px solid #e1e4e8;
+  margin: 2.5rem 0;
+}
+
+/* ---- Links ------------------------------------------------ */
+
+.main-content a {
+  color: #1a3a5c;
+  text-decoration: underline;
+  text-decoration-color: rgba(26, 58, 92, 0.35);
+  text-underline-offset: 2px;
+}
+
+.main-content a:hover {
+  color: #0d5fa0;
+  text-decoration-color: #0d5fa0;
+}
+
+/* ---- Repo structure code block ---------------------------- */
+.main-content pre.highlight {
+  background: #0d1117;
+}
+
+/* ---- Site footer ------------------------------------------ */
+
+.site-footer {
+  border-top: 1px solid #e1e4e8;
+  padding: 1.5rem 2rem;
+  font-size: 0.85rem;
+  color: #57606a;
+}
+
+/* ---- Mobile responsive ------------------------------------ */
+
+@media (max-width: 640px) {
+  .main-content {
+    padding: 1.5rem 1rem;
+  }
+
+  .main-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .main-content h2 {
+    font-size: 1.25rem;
+  }
+
+  .main-content table {
+    font-size: 0.82rem;
+  }
+
+  .main-content table th,
+  .main-content table td {
+    padding: 0.45rem 0.6rem;
+  }
+}

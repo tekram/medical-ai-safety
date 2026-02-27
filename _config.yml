@@ -1,8 +1,13 @@
 title: Medical AI Safety Research
 description: "Adversarial red-teaming research on medical AI safety — 3 papers evaluating 18 frontier LLMs across 2,880 standardized attack evaluations"
 author: Tashfeen Ekram
+email: tekram@lumahealth.io
+url: "https://tekram.github.io"
+baseurl: "/medical-ai-safety"
 
-theme: jekyll-theme-cayman
+remote_theme: pages-themes/cayman@v0.2.0
+plugins:
+  - jekyll-remote-theme
 
 # Build settings
 markdown: kramdown
@@ -11,6 +16,7 @@ highlighter: rouge
 kramdown:
   input: GFM
   syntax_highlighter: rouge
+  hard_wrap: false
 
 # Navigation
 show_downloads: false
@@ -19,3 +25,4 @@ show_downloads: false
 exclude:
   - PLAN-*.md
   - OVERNIGHT-SUMMARY.md
+  - generate_enhanced_figures.py
