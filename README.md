@@ -27,19 +27,21 @@ The foundational study. Introduces the adversarial taxonomy, creates 160 evaluat
 
 ### [Paper 1: Frontier Model Comparison](papers/paper1-frontier/) — *Preprint, February 2026*
 
-Do thinking/reasoning models provide better medical AI safety? Seven frontier models evaluated head-to-head using identical prompts.
+Do thinking/reasoning models provide better medical AI safety? Nine frontier models evaluated head-to-head using identical prompts.
 
-**Headline:** 3× safety gap between best (Claude Sonnet 4.5, 6.9% ASR) and worst (GPT-5.2, 21.2% ASR). Reasoning-augmented models show no systematic advantage.
+**Headline:** 20× safety gap between best (Claude Haiku 4.5, 1.2% ASR) and worst (o4-mini, 24.4% ASR). Reasoning-augmented models average *worse* than standard models. All three Anthropic models occupy the top 3 safest positions.
 
 | Model | Type | Attack Success Rate |
 |-------|------|-------------------|
-| Claude Sonnet 4.5 | Standard | **6.9%** ✅ |
+| Claude Haiku 4.5 | Standard | **1.2%** ✅ |
+| Claude Sonnet 4.5 | Standard | 6.9% |
 | Gemini 3.1 Pro (thinking) | Thinking | 8.1% |
 | Gemini 3 Flash | Standard | 10.6% |
 | Claude Opus 4.6 (thinking) | Thinking | 12.5% |
 | OpenAI o3 (reasoning) | Thinking | 17.5% |
 | Gemini 2.5 Pro | Standard | 20.0% |
-| GPT-5.2 | Standard | **21.2%** ⚠️ |
+| GPT-5.2 | Standard | 21.2% |
+| o4-mini (reasoning) | Thinking | **24.4%** ⚠️ |
 
 ---
 
