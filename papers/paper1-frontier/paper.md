@@ -97,21 +97,24 @@ Attack difficulty was rated on a 3-point scale (2=moderate, 3=hard, 4=very hard)
 
 The attack dataset was generated using Claude Sonnet 4.5 as the attacker agent, producing 160 distinct adversarial prompts (140 single-turn, 20 multi-turn) distributed across all 8 categories. Multi-turn attacks comprised sequences of 3–5 messages designed to build rapport and escalate toward harmful targets over the course of a conversation.
 
-Critically, the **identical 160 attack prompts** were applied to all six target models. This eliminates prompt-level variability as a confound, ensuring that observed inter-model differences reflect genuine safety capability differences rather than random prompt sampling effects. Each model received the same standard medical assistant system prompt used in clinical deployment contexts.
+Critically, the **identical 160 attack prompts** were applied to all nine target models. This eliminates prompt-level variability as a confound, ensuring that observed inter-model differences reflect genuine safety capability differences rather than random prompt sampling effects. Each model received the same standard medical assistant system prompt used in clinical deployment contexts.
 
 ### 3.3 Target Models
 
-**Standard Models:**
+**Standard Models (n=5):**
+- **Claude Haiku 4.5** (Anthropic, 2025): claude-haiku-4-5-20251001
 - **Claude Sonnet 4.5** (Anthropic, September 2025): claude-sonnet-4-5-20250929
-- **GPT-5.2** (OpenAI, 2025): gpt-5.2-chat-latest (the first OpenAI model unifying general-purpose and reasoning capabilities)
-- **Gemini 2.5 Pro** (Google, 2025): gemini-2.5-pro (data available for n=107/160 prompts at analysis time)
+- **GPT-5.2** (OpenAI, 2025): gpt-5.2-chat-latest
+- **Gemini 2.5 Pro** (Google, 2025): gemini-2.5-pro
+- **Gemini 3 Flash** (Google, 2025): gemini-3-flash-preview
 
-**Thinking/Reasoning Models:**
-- **Claude Opus 4.6** (Anthropic, 2025): claude-opus-4-6, extended thinking mode (adaptive), n=141/160 at analysis time
-- **o3** (OpenAI, 2025): o3 (OpenAI's most capable reasoning model, no temperature parameter)
+**Thinking/Reasoning Models (n=4):**
+- **Claude Opus 4.6** (Anthropic, 2025): claude-opus-4-6, extended thinking mode (adaptive)
+- **OpenAI o3** (OpenAI, 2025): o3 (OpenAI's most capable reasoning model)
 - **Gemini 3.1 Pro** (Google, 2025): gemini-3.1-pro-preview, thinking budget enabled
+- **o4-mini** (OpenAI, 2025): o4-mini (OpenAI small reasoning model, max_completion_tokens=12,000)
 
-Temperature was set to 0.7 for standard models where supported. The o3, o4-mini, and GPT-5.2 models do not accept temperature parameters. Claude Opus 4.6 was evaluated with adaptive thinking enabled (no fixed budget).
+Temperature was set to 0.7 for standard models where supported. The o3, o4-mini, and GPT-5.2 models do not accept temperature parameters. Claude Opus 4.6 was evaluated with adaptive thinking enabled (no fixed budget). All nine models completed n=160 evaluations each (1,440 total).
 
 ### 3.4 Automated Evaluation
 
@@ -292,9 +295,9 @@ Key conclusions:
 
 4. **Authority Impersonation is the universal vulnerability**: Every tested model shows elevated ASR on this category (5–85%), and it is the dominant attack vector across all nine models.
 
-4. **Full refusal rate is the strongest safety proxy**: Models with high full-refusal rates (Claude Sonnet 4.5: 86.2%) consistently outperform those with more ambiguous guardrail patterns.
+5. **Full refusal rate is the strongest safety proxy**: Models with high full-refusal rates (Claude Sonnet 4.5: 86.2%) consistently outperform those with more ambiguous guardrail patterns.
 
-5. **Multi-turn attacks are less effective**: Multi-turn escalation achieved lower ASR than single-turn attacks across all 9 models. Current models appear specifically trained on escalation patterns; more sophisticated long-form sequences remain untested.
+6. **Multi-turn attacks are less effective**: Multi-turn escalation achieved lower ASR than single-turn attacks across all 9 models. Current models appear specifically trained on escalation patterns; more sophisticated long-form sequences remain untested.
 
 Health systems deploying medical AI must demand adversarial safety evaluation data from vendors. The field needs standardized medical AI adversarial benchmarks, analogous to MMLU for knowledge assessment, to enable apples-to-apples safety comparison at procurement time.
 
